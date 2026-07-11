@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Segunda Entrada - Mi Blog</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../CSS/style.css">
+    </head>
+
+ <body>
+
+        <header>
+
+            <h1><a href="../index.html">BlueNotes</a></h1>
+
+            <nav>
+                <a href="../index.html">Inicio</a>
+                <a href="#">Sobre yo</a>
+            </nav>
+
+        </header>
+
+        <main class="entrada-completa">
+        
+            <article>
+                <h2>Parte 2</h2>
+                <p class="fecha">24 de junio, 2026</p>
+                <p>Buenas buenas, bueno, la verdad aca si tengo mucha informacion que agregar, debido a que la verdad ayer no me quede quieto
+                    y me puse a hacer demaciadas cosas, no solo vincular los archivos de estilo al index, sino que tambien termine publicando
+                    la pagina en github... <br><br>
+
+                    Bueno igual intentare organizar todo esto, soooo, primero en esta parte 2 vamos a hablar mas sobre los estilos, como fue
+                    que terminamos dejando esto en forma de tarjetas, o al menos en su primera version, supongo que mas adelante cambiaremos la
+                    distribucion de lo que es la pagina ahora, y pues ya ahsjdhasdjhs.</p>
+            </article>
+
+            <article>
+                <p class="fecha">24 de junio, 2026</p>
+                <p>Anoche me disocie tanto que no se en que momento termine disque creando y configurando un token en github que no expira osea
+                    *colapso* bueno ya, empecemos.</p>
+            </article>
+
+            <article>
+                <h2>Estilo de tarjetas</h2>
+                <p class="fecha">24 de junio, 2026</p>
+                <p>De hecho para lograr este estilo es bastante facil, unicamente tenemos que ubicar los articulos "article" dentro del main y
+                    colocarles un titulo con una etiqueta como "h2", opcional la fecha, digamos que aca la tengo implementada para llevar el 
+                    registro de los dias que me pongo a estudiar y los que no, y un "p" o pues un parrafo de texto, que es donde escribo todas
+                    estas babosadas. </p>
+
+                    <pre><code>
+    "main"
+        "article"
+            "h2" Ejemplo, aca pondria Entrada 1 "/h2"
+            "p class="fecha">dia - mes - año" "/p"
+            "p" Cualquier descripcion o comentario x "/p"
+
+                    </pre></code>
+
+                <p>Literalmente esto es la logica detras del estilo de las tarjetas de texto que tengo aca, pero no es todo claramente, el codigo
+                    como tal, genera la estructura y organiza el contenido en forma de tarjeta, lo que enrealidad le da ese estilo, y la animacion
+                    es todo lo que vamos a agregar detro del CSS. <br><br>
+
+                    Algo que no explique es el "class="fecha"" y esto en pocas palabras es para indicar la fecha que colocamos, o que queremos resaltar
+                    hay funciones que la colocan automaticamente, no como esta que es manual, pero pues ya lo cambiaremos con el tiempo.
+                </p>
+
+                <pre><code>
+
+    article {
+        background: #ffffff;
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
+        padding: 24px;
+        margin-bottom: 20p;
+    }
+
+    article h2{
+        margin: 0 0 6px 0;
+        font-size: 20px;
+    }
+
+    .fecha {
+        margin: 0 0 12px 0;
+        font-size: 13px;
+        color: #aaa;
+    }
+
+                </pre></code>
+
+            <p>Esto ya nos daria el estilo de las tarjetas de texto, literalmente mientras que en el index estamos colocando la estructura, en el css estamos
+                resaltando deverdad lo que son las tarjetas, aca unicamente esta el estilo, color, sombra, fondo, etc, aun no le agregamos la animacion con
+                el "a:hover", lo cual, es lo siguiente que vamos a agregar.</p>
+
+            </article>
+
+            <article>
+                <h2>Animacion / Efecto de tarjeta</h2>
+                <p class="fecha">24 de junio, 2026</p>
+                <p>
+                    Ahora, para lograr el efecto de que la tarjeta se mueve cuando pasamos el puntero del mouse por encima de la misma solo vamos a tener que 
+                    agregar unas pocas cosas, y todo dentro del css.
+                </p>
+
+                <pre><code>
+
+    Esto es lo que se agrega dentro del bloque "article"
+
+    border-left: 4px solid #222;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    y creamos otro bloque llamado:
+
+    article:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    }
+
+                </code></pre>
+
+                <p>Aver traducido al español pasa lo siguente, las dos lineas de codigo que agregamos en el bloque de "article" signfican que estamos primero
+                    colocando el borde izquierdo de la tarjeta de una forma especifica, en este caso solido de 4 pixeles con un color #222, y queremos que
+                    haga una transicion, transformando la tarjeta con una duracion de 0.2 segundos, aparte que genere una sombra a la caja tambien con una duracion
+                    de 0.2 segundos, diciendolo en palabras es mucha cosa, la verdad ,pero codigo son solo 6 palabritas, asi lo entendi mejor. <br><br>
+
+                    Ahora en el otro bloque de "article:hover" estamos indicando que es lo que queremos que se haga cuando el mouse pase por encima de las tarjetas
+                    en este caso queremos que se trasforme "transform" y asi cuando el mouse pase por cada una de las tarjetas que tengamos estas se desplacen -3 
+                    pixeles en el eje de Y, es decir de forma vertical, pues si no nos queremos complicar la vida hablando en terminos de eje de x y eje de y (por si
+                    acaso el eje de x siempre representa todo lo que sea en horizontal y el eje de Y todo lo que sea vertical), el box shadow, cumple lo mismo que en 
+                    el anterior, solo que al agregar parametros como "0 6px 20px" le estamos dando la instruccion de "en cual lado quiero que generes la sombra" algo asi. </p>
+
+            </article>
+
+            <article>
+                <h2>Diseño</h2>
+                <p class="fecha">24 de junio, 2026</p>
+                <p>La verdad en esta parte, primero tuve que escoger la paleta de colores actual que tiene la pagina, y obviamente siguiendo mi estilo personal y que considero
+                    que todo en monocromatico queda mejor (blanco y negro), pues escogi colores crema tanto claros como oscuros para la interfaz, texto, fondos, color de letras
+                    etc etc etc, no hay gran cosa que explicar aca, ademas que tambien modificamos/organizamos un poco mas la sintaxis del archivo .CSS, ya que una de las ventajas
+                    que tiene este archivo es que como llama a las etiquetas en general, pues es mucho mas facil de organizar, no tengo que estar escogiendo color por color para cada
+                    tarjeta, osea si podria hacerlo, pero que pereza. <br> <br>
+                </p>
+
+                <pre><code>
+
+    /* ===== BASE ===== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, sans-serif;
+    background-color: #f5f5f5;
+    color: #1a1a1a;
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #1a1a1a;
+}
+
+/* ===== NAV ===== */
+nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #666;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #1a1a1a;
+}
+
+/* ===== MAIN ===== */
+main {
+    max-width: 700px;
+    margin: 25px auto;
+    padding: 0 15px;
+}
+
+/* ===== ARTÍCULOS ===== */
+article {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-left: 3px solid #333;
+    border-radius: 0 10px 10px 0;
+    padding: 24px;
+    margin-bottom: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+article:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+article h2 {
+    margin: 0 0 6px 0;
+    font-size: 20px;
+    color: #1a1a1a;
+}
+
+.fecha {
+    margin: 0 0 12px 0;
+    font-size: 13px;
+    color: #aaa;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 2px;
+    font-size: 13px;
+    color: #bbb;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 30px;
+}
+
+                </code></pre>
+
+                <p>Algo asi quedaria el .css que maneja esta pagina, junto con los estilos de las tarjetas, animacion y aja todo eso</p>
+
+            </article>
+
+            <article>
+                <h2>Fuentes</h2>
+                <p class="fecha">24 de junio, 2026</p>
+                <p>Bueno, aca mas que nada, ya es cuestion de seguir agrengando cosas para que la pagina sea visualmente mas llamativa, algo chistoso es que 
+                    la verdad, las letras asi estilo Times New Roman no es como que me llamen mucho la atencion, pero basandonos en la ligera recomendacion de 
+                    bastantes inteligencias artificiales, con respecto a los estilos visuales de una pagina, el estilo de esas fuentes le agrega un "aire formal"
+                    al diseño de la pagina, y yo que se, soy programador no diseñador bro, lo que tu digas. <br><br>
+
+                    Ahora, para cambiar la fuente de la pagina en este caso utilizamos la etiqueta link dentro del head del archivo index, que llegados a este punto
+                    el index es la base, el pilar de la pagina, el index como tal mueve todo lo que tiene la interfaz principal, sin el index no hay nada. <br><br>
+
+                    Bueno continuemos, tenemos que agregar algo por este estilo, no voy a entrar en detalles ya explique mucho hoy, solo copie y pegue esto si lo
+                    necesita para cambiar la fuente de su pagina, pero le recomiendo que los ponga despues de la etiqueta de meta charset y antes del titulo.</p>
+
+                    <pre><code>
+
+    "link rel="preconnect" href="https://fonts.googleapis.com""
+    "link rel="preconnect" href="https://fonts.gstatic.com" crossorigin"
+    "link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@600&display=swap" rel="stylesheet""
+
+                    </code></pre>
+
+                <p>Ahora, toca modificar el body, el header h1 y article h2 del .CSS, porque si, ya agregamos las fuentes mediante el link, pero aun no las 
+                    implementamos a la pagina, como tal las fuentes ya estan, pero no las vemos.
+                </p>
+            </article>
+
+            <article>
+                <p>Ya aqui solo seria modificar los bloques de la siguiente manera, unicamente agregando los parametros de font family y referenciando las 
+                    fuentes que acabamos de agregar, algo asi:</p>
+
+                    <pre><code>
+
+    body {
+        font-family: 'Inter', system-ui, sas-serif;
+    }
+
+    header h1, article h2 {
+        font-family: 'Playdair Display', serif;
+    }
+
+                    </code></pre>
+
+                <p>Nota: Aca como en el .CSS que yo estaba manejando, ya tenia por separados los bloques tanto del h1 como del h2 que serian uno para la 
+                    cabecera "header" y el otro para los articulos "article", como ya los tenia, pues solo agrege una linea de codigo que era el font family 
+                    en ambos, no tuve que añadir esos dos bloques extras, porque aja, mas trabajo y que pereza. <br><br>
+
+                    Como dijo loquendo, yo no lo descargo porque ya lo tengo. (mano en este punto tengo muy pegada en la cabeza "La carcel de Sing Sing - Alci acosta")
+                </p>
+
+            </article>
+            
+        </main>
+
+
+        <footer>
+            <p>Create By Blueee - 2026</p>
+        </footer>
+        
+    </body>
+</html>

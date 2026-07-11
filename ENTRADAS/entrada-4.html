@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cuarta Entrada - BlueNotes</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../CSS/style.css">
+    </head>
+
+    <body>
+
+        <header>
+
+            <h1><a href="../index.html">BlueNotes</a></h1>
+
+            <nav>
+                <a href="../index.html">Inicio</a>
+                <a href="#">Sobre yo</a>
+            </nav>
+
+        </header>
+
+        <main class="entrada-completa">
+
+            <article>
+                <p class="fecha">4 de julio, 2026</p>
+                <p>Holi, emmm, si, volvi a cargar informacion a partir del 4 de julio (ironicamente) porque pues pasaron cositas y estuve
+                haciendo tareas varias que no fueron actualizar el blog (mala mia, y odio el smirnoff de tamarindo), pero bueno, ya ahora
+                podemos volver a la programacion habitual, aparte que con el sistema de inventario (el otro proyecto) pues tuve que 
+                modificar algunas cosas y montarlo otra vez, pero ya, todo chill.</p>
+            </article>
+
+                <article>
+                <h2>Flexbox</h2>
+                <p class="fecha">4 de julio, 2026</p>
+                <p>Primero obvio para entrar con la definicion, el felxbox seria un modelo de CSS3 diseñado para organizar, alinear y distribuir elementos en una pagina web de forma flexible y responsiva. <br> <br>
+                    
+                Ahora, en terminos mas de la pagina, nosotros utilizamos dos elementos los cuales son "display:flex" y "justify-content", para poder alinear los elementos de forma horizontal dentro del header (donde tenemos el titulo del blog, inicio y sobre yo) <br> <br>
+            
+                El display:flex actua como un contenedor, y dentro del contenedor, todos los elementos que coloquemos actuaran como sus hijos directos, dichos items se organizaran de forma horizontal automaticamente.</p>
+
+            <pre><code>
+
+    "header"        ← contenedor flex
+    "h1"..."/h1"    ← ítem 1
+    "nav>..."/nav"  ← ítem 2
+    "/header"
+
+            </code></pre>
+
+            <p>Sin el flex, tanto el h1 como el nav se apilarian uno encima del otro (segun le dicen flujo normal), pero con flex se alinean de forma horizontal. <br> <br>
+            
+            Ahora el "justify-content" controla el espacio sobrante entre los item que conforman la fila dentro del contenedor. <br><br>
+        
+            Para entenderlo de mejor forma vuelvo y entro en los terminos del Eje de X y el Eje de Y, entonces, tenemos que tener 3 conceptos claros. <br><br>
+        
+            Justify-content: Organiza todos los elementos en base al eje de x, De izquierda a derecha. <br><br>
+        
+            align-items: Organiza todos los elementos en base al eje de y, De arriba a abajo. <br><br>
+        
+            flex-direction: Define la dirección en la que se alinean los elementos, tambien puede modificar el orden de los mismos. <br><br>
+            </p>
+            </article>
+
+            <article>
+                <h2>Layout</h2>
+                <p class="fecha">4 de julio, 2026</p>
+
+                <p>Despues de molestar con el Flexbox hasta al menos comprender un poco los terminos y como funciona, vamos a mejorar nuestro propio layou y basandonos en la recomendacion vamos a distribuir el espacio de la siguiente forma: 75% del ancho de la pagina para el articulo, y 25% para la barra lateral, o bueno eso. (tengo mucho sueño acumulado dios) <br><br>
+                
+                </p>
+
+            </article>
+
+        </main>
+
+        <footer>
+            <p>Create By Blueee - 2026</p>
+        </footer>
+
+    </body>
+</html>
