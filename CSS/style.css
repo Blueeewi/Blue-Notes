@@ -63,13 +63,14 @@ main {
     display: flex;
     gap: 32px;
     align-items: flex-start;
-    max-width: 1000px;
+    max-width: 960px;
     margin: 25px auto;
     padding: 0 20px;
 }
 
 .contenido {
     flex: 3;
+    min-width: 0;
 }
 
 .sidebar {
