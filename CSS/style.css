@@ -243,3 +243,45 @@ code {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
+
+/* ===== PERFIL ===== */
+.perfil {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 48px;
+    align-items: start;
+    max-width: 860px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.perfil-foto img {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+}
+
+.perfil-info h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    margin: 0 0 6px 0;
+}
+
+.perfil-rol {
+    color: #888;
+    font-size: 15px;
+    margin: 0 0 24px 0;
+}
+
+.perfil-info p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 16px;
+}
+
+.perfil-links {
+    display: flex;
+    gap: 16px;
+    margin-top: 8px;
+}
