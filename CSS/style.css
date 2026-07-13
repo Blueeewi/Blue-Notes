@@ -361,6 +361,7 @@ footer {
 
     .entrada-completa {
         flex-direction: column;
+        padding: 0 10px;
     }
 
     .sidebar {
@@ -390,9 +391,17 @@ footer {
         font-size: 11px;
         padding: 10px;
         border-radius: 6px;
+        overflow-x: scroll;
+        max-width: 100%;
+        white-space: pre-wrap;
     }
-
+    
     main {
         padding: 0 10px;
     }
-}
+
+    body {
+        overflow-x: hidden;
+    }
+
+    }
