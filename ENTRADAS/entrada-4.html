@@ -71,9 +71,77 @@
                 <h2>Layout</h2>
                 <p class="fecha">4 de julio, 2026</p>
 
-                <p>Despues de molestar con el Flexbox hasta al menos comprender un poco los terminos y como funciona, vamos a mejorar nuestro propio layou y basandonos en la recomendacion vamos a distribuir el espacio de la siguiente forma: 75% del ancho de la pagina para el articulo, y 25% para la barra lateral, o bueno eso. (tengo mucho sueño acumulado dios) <br><br>
+                <p>Despues de molestar con el Flexbox hasta al menos comprender un poco los terminos y como funciona, vamos a mejorar nuestro propio layout y basandonos
+                en la recomendacion de las ia, vamos a distribuir el espacio de la siguiente forma: 75% del ancho de la pagina para el articulo, y 25% para la barra lateral,
+                o bueno eso. (tengo mucho sueño acumulado dios) <br><br>
+
+                <p class="fecha">12 de Julio, 2026</p> 
                 
+                (Hola) <br>
+
+                bueno si soy un descarado lose, no cargue informacion por un buen tiempo pero
+                todo tiene su motivo, tenemos nuevo PC, eh estado trabajando y ademas cargando
+                materias para poder estudiar otro semestre, asi que la verdad eh estado bastante
+                atareado con ese tema, por ende casi 2 semanas despues volvi a la pagina jijiji.
                 </p>
+            </article>
+
+            <article id="sidebar">
+                <h2>Sidebar</h2>
+                <p class="fecha">12 de julio, 2026</p>
+                <p>Aver, mientras seguimos molestando con el tema del flexbox, decidimos que seria 
+                esteticamente mas bonito si cada pestaña de las entradas cuenta con su propio sidebar
+                esto para que sea mas facil volver a algun articulo sin la necesidad de hacer scroll,
+                pero ¿Como logramos esto?, calma mi pequeño saltamontes que para alla vamos.
+
+                lo primero es que al puro inicio del main, en cada una de nuestras entradas, o como sea
+                que les hallamos puesto, vamos a colocar un div, y este div, ya viene con una clase declarada
+                en este caso algo asi: 
+
+                <pre><code>
+
+    "div class="contenido"""
+            <!-- todos los articles aquí -->
+        "/div"
+
+    Ahora en la parte final del main, vamos a colocar algo asi:
+
+    "side class="sidebar"""
+            "h3"En esta entrada"/h3"
+            "ul"
+                "li"a href="#seccion-1">Nombre sección"/a""/li"
+                <!-- etc -->
+            "/ul"
+        "/aside"
+
+                </code></pre>
+
+            ojo, estoy diciendo que todo esto va dentro del main, nada va por fuera sino se nos jode todo lo que
+            intentamos hacer </p>
+
+            </article>
+
+            <article id="organizar-articulos">
+            <h2>Organizar Articulos</h2>
+            <p class="fecha">12 de julio, 2026</p>
+            <p>Ahora si, una vez colocados esos bloques de codigo, que hacemos, donde vamos a colocar nuestros 
+            articulos, puesssss mi pequeño asaltacunas, vamos a colocarlos dentro del div, y ya, no tenemos que modificar
+            la estructura, los colocamos tal y como los veniamos anotando antes, pero la diferencia es que ahora van a estar 
+            dentro del div, y si te preguntas ¿Pa que mierda los meto ahi?, pues es sencillo, si los colocamos en el div, podemos
+            asignarles un id a cada articulo, con ese ID lo que vamos a hacer es crear un vinculo para que el sidebar nos lleve 
+            directamente al articulo que estamos buscando, algo asi seria el ejemplo en el codigo: <br><br>
+            
+            "article id="parte-2""" -> esto dentro de la etiqueta del articulo que tenemos <br><br>
+
+            "li""a href="#parte-2""Parte 2"/a""/li" -> esto dentro del aside al final del main <br><br>
+
+            ya con eso tendriamos vinculados el nombre de nuestro articulo, con el nombre que aparece en el sidebar, o barra lateral,
+            si creen que me volvi muy bilingue, eso seria todo, lit es mas sencillo de lo que uno piensa, pero lo tedioso siempre sera
+            organizar la informacion, verificar que queden bien anotados los id, y los # que vinculan todo, porque cabe aclara, si estos
+            dos son diferentes por un solo caracter, el vinculo no sirve, y solo lo tendremos de adorno, JASHDJASHD, pero ya.
+
+            Ahora lo proximo sera seguir con un poquito mas de la fase 2 y ahi pasamos a otro apartado dedicado solo a toda la fase 2 del
+            proyecto, hasta el momento esto solo ha sido la fase uno, y son como 5 JUEPUTA VIDA!. </p> 
 
             </article>
 
@@ -84,6 +152,8 @@
                 <ul>
                     <li><a href="#flexbox">Flexbox</a></li>
                     <li><a href="#layout">Layout</a></li>
+                    <li><a href="#sidebar">Sidebar</a></li>
+                    <li><a href="organizar-articulos">Organizar Articulos</a></li>
                    
                 </ul>
 
