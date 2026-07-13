@@ -162,6 +162,58 @@
 
             </article>
 
+            <article id="media-queries">
+                <h2>Media Queries</h2>
+                <p class="fecha">13 de julio, 2026</p>
+                <p>La logica detras de esto es que el media Queries es una forma de pensar no solo en que la pagina que estamos haciendo se vea bien
+                en pc, sino que en cualquier dispositivo, hasta donde tengo claro el concepto, la mayoria de las paginas son responsive, es decir que
+                se adaptan independientemente del ancho de la pantalla, para eso tenemos que jugar un poco con el css. <br><br>
+
+                Las media queries le van a decir directamente al css, "si la pantalla es mejor a tantos pixeles, ponga esto para que se vea mejor".</p>
+
+                <pre><code>
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+    /* Las tres tarjetas del index pasan a una columna */
+    .categorias {
+        grid-template-columns: 1fr;
+    }
+
+    /* El layout de entradas pierde el sidebar */
+    .entrada-completa {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        position: static;
+        width: 100%;
+    }
+
+    /* El perfil pasa a una columna */
+    .perfil {
+        grid-template-columns: 1fr;
+    }
+
+    .perfil-foto img {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    /* El grid de apuntes pasa a una columna */
+    .entradas-grid {
+        grid-template-columns: 1fr;
+    }
+} 
+                </code></pre>
+
+                <p>Todo se resuelve agregando este bloque al final del CSS, obvio esto fue una primera version, le he ido modificando
+                y agregando mkadas con forme pasa el tiempo para que se vea mejor, o para que me guste, personalmente, con eso ya podemos
+                tener 2 distribuciones de la interfaz, una para pc otra para movil, y el fin es que en ambas sean agradable a la vista, en todas
+                de hecho pero orientado principalmente en esos dos entornos. (ya despues solo purgue el css, y c'est fini)
+                </p>
+            </article>
+
             </div>
 
                <aside class="sidebar">
@@ -172,6 +224,7 @@
                     <li><a href="#sidebar">Sidebar</a></li>
                     <li><a href="#organizar-articulos">Organizar Articulos</a></li>
                     <li><a href="#flexbox-grid">Flexbox (Otra vez) y grid</a></li>
+                    <li><a href="#media-queries">Media Queries</a></li>
                    
                 </ul>
 
