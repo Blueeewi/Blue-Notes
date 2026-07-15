@@ -187,6 +187,7 @@ main {
 }
 
 /* ===== PERFIL ===== */
+
 .perfil {
     display: grid;
     grid-template-columns: 280px 1fr;
@@ -229,6 +230,7 @@ main {
 }
 
 /* ===== LAYOUT ENTRADAS ===== */
+
 .entrada-completa {
     display: flex;
     gap: 32px;
@@ -371,6 +373,174 @@ footer {
     margin: 0;
 }
 
+/* =====================================================
+   SOBRE MI
+===================================================== */
+
+.sobre-seccion{
+    max-width:900px;
+    margin:80px auto;
+    padding-top:40px;
+    border-top:1px solid #e5e5e5;
+}
+
+.sobre-seccion:first-of-type{
+    margin-top:90px;
+}
+
+.sobre-seccion h2{
+    font-family:'Playfair Display',serif;
+    font-size:2rem;
+    font-weight:600;
+    color:#1f2937;
+    margin-bottom:30px;
+}
+
+.sobre-seccion h3{
+    font-size:1rem;
+    font-weight:600;
+    color:#1f2937;
+    margin-bottom:12px;
+}
+
+.sobre-seccion p{
+    line-height:1.9;
+    color:#555;
+    margin-bottom:18px;
+}
+
+/* =====================================================
+   TECNOLOGIAS
+===================================================== */
+
+.tecnologias{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:25px;
+}
+
+.tecnologias span{
+
+    border:1px solid #d9d9d9;
+    padding:10px 18px;
+    border-radius:8px;
+    font-size:.95rem;
+    color:#444;
+    transition:.25s;
+    cursor:default;
+    background:#fff;
+
+}
+
+.tecnologias span:hover{
+
+    border-color:#1f2937;
+    color:#1f2937;
+
+}
+
+/* =====================================================
+   ACTUALMENTE
+===================================================== */
+
+.actualmente{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    margin-top:35px;
+
+}
+
+.nota{
+
+    background:
+    repeating-linear-gradient(
+
+        to bottom,
+        #fcfbf8,
+        #fcfbf8 33px,
+        #f2eee7 34px
+
+    );
+
+    border:1px solid #ebe7e1;
+    padding:28px;
+    border-radius:12px;
+
+}
+
+.nota:hover{
+
+    transform:translateY(-4px);
+    border-color:#d8d2ca;
+
+}
+
+.nota h3{
+
+    margin-bottom:18px;
+
+}
+
+.nota p{
+
+    margin:0;
+    line-height:1.9;
+
+}
+
+/* =====================================================
+   PERFIL
+===================================================== */
+
+/* Hace que el texto respire un poco más */
+
+.perfil-info p,
+.perfil-contenido p{
+
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.9;
+    color: #555;
+    margin-bottom: 22px;
+
+}
+
+.perfil-rol{
+
+    color:#6b7280;
+    font-size:1rem;
+    margin-bottom:35px;
+
+}
+
+/* =========================================
+   CONTENIDO DEL PERFIL
+========================================= */
+
+.perfil-contenido{
+
+    max-width:900px;
+    margin:45px auto 0;
+    padding-top:40px;
+    border-top:1px solid #e8e8e8;
+
+}
+
+.perfil-contenido p{
+
+    margin-bottom:22px;
+
+}
+
+.perfil-contenido .perfil-links{
+
+    margin-top:35px;
+
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
 
@@ -435,4 +605,58 @@ footer {
         overflow-x: hidden;
     }
 
+    .sobre-seccion{
+
+        margin:60px auto;
+
     }
+
+    .actualmente{
+
+        grid-template-columns:1fr;
+
+        gap:25px;
+
+    }
+
+    .actualmente div{
+
+        border-right:none;
+
+        border-bottom:1px solid #ececec;
+
+        padding-bottom:20px;
+
+    }
+
+    .actualmente div:last-child{
+
+        border-bottom:none;
+
+    }
+
+    .frase-final blockquote{
+
+        font-size:1.5rem;
+
+    }
+
+}
+
+@media (max-width:600px){
+
+    .tecnologias{
+
+        gap:10px;
+
+    }
+
+    .tecnologias span{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+}
