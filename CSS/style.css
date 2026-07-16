@@ -542,6 +542,8 @@ footer {
 }
 
 /* ===== RESPONSIVE ===== */
+
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
 
     .hero {
@@ -596,7 +598,7 @@ footer {
         max-width: 100%;
         white-space: pre-wrap;
     }
-    
+
     main {
         padding: 0 10px;
     }
@@ -605,58 +607,49 @@ footer {
         overflow-x: hidden;
     }
 
-    .sobre-seccion{
-
-        margin:60px auto;
-
+    .sobre-seccion {
+        margin: 32px auto;
+        padding-top: 24px;
     }
 
-    .actualmente{
-
-        grid-template-columns:1fr;
-
-        gap:25px;
-
+    .sobre-seccion h2 {
+        font-size: 1.4rem;
+        margin-bottom: 16px;
     }
 
-    .actualmente div{
-
-        border-right:none;
-
-        border-bottom:1px solid #ececec;
-
-        padding-bottom:20px;
-
+    .sobre-seccion p,
+    .perfil-info p,
+    .perfil-contenido p {
+        font-size: 0.95rem;
+        line-height: 1.7;
     }
 
-    .actualmente div:last-child{
-
-        border-bottom:none;
-
+    .perfil-contenido {
+        margin-top: 24px;
+        padding-top: 24px;
     }
 
-    .frase-final blockquote{
-
-        font-size:1.5rem;
-
+    .actualmente {
+        grid-template-columns: 1fr;
+        gap: 16px;
     }
 
+    .tecnologias {
+        gap: 10px;
+    }
+
+    .tecnologias span {
+        width: auto;
+        text-align: left;
+    }
+
+    .perfil-contenido {
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-@media (max-width:600px){
-
-    .tecnologias{
-
-        gap:10px;
-
-    }
-
-    .tecnologias span{
-
-        width:100%;
-
-        text-align:center;
-
-    }
-
+    .sobre-seccion {
+    padding-left: 20px;
+    padding-right: 20px;
+}
 }
