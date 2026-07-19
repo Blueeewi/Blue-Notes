@@ -43,8 +43,18 @@ gsap.utils.toArray("article").forEach(function(article) {
             ease: "power2.out",
             scrollTrigger: {
                 trigger: article,
-                start: "top 75%",
+                start: "top 85%",
             }
         }
     )
 })
+
+function toggleDark() {
+    document.body.classList.toggle('dark')
+    localStorage.setItem('dark', document.body.classList.contains('dark'))
+}
+
+// Al cargar la pagina, revisar si dark mode estaba activo
+if (localStorage.getItem('dark') === 'true') {
+    document.body.classList.add('dark')
+}
